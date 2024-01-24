@@ -14,8 +14,7 @@ export const scrapeMercadoPago = async() => {
 	});
 
 	// Regex text scrape
-	const regex = /(\d+(\.\d+)?)/g;
-	const result = scrapeText?.match(regex);
+	const result = scrapeText?.replace(/\D+\.?\D+/g, "");
 
 	return result;
 }
