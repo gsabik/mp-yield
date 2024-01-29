@@ -9,7 +9,7 @@ const Yield = async() => {
         <div className="flex flex-col">
           <h2 className="text-2xl">El rendimiento actual es de <span className="font-semibold">{dataYield}%</span></h2>
           <div className="flex flex-row">
-            <TableYield/>
+            <TableYield dataYield={dataYield}/>
           </div>
         </div>
     </section>

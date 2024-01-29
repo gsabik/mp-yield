@@ -7,9 +7,13 @@ import {
   TableHeader, 
   TableRow 
 } from "./ui/table";
-import { exampleYields } from "@/utils/utils";
+import { exampleYields, calculateYield } from "@/utils/utils";
 
-const TableYield = () => {
+type Props = {
+  dataYield: number
+}
+
+const TableYield = ({ dataYield }: Props) => {
   return (
     <Table>
       <TableCaption>Rendimientos calculados a 30 días</TableCaption>
@@ -22,11 +26,11 @@ const TableYield = () => {
       </TableHeader>
       <TableBody>
         {
-          exampleYields.map(({ id, investment, result }) => (
+          exampleYields.map(({ id, investment }) => (
             <TableRow key={id}>
               <TableCell>#</TableCell>
               <TableCell>{investment.toLocaleString("es-AR", { style: "currency", currency: "ARS" })}</TableCell>
-              <TableCell>{result}</TableCell>
+              <TableCell>{calculateYield(investment, dataYield)}</TableCell>
             </TableRow>
           ))
         }
