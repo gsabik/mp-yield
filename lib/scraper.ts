@@ -14,5 +14,6 @@ export const scrapeMercadoPago = async() => {
 
 	// Regex text scrape
 	const result = scrapeText?.replace(/\D+\.?\D+/g, "");
-	return result;
+	const parseResult = result ? parseInt(result) : NaN;
+	return parseResult;
 }

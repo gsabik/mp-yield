@@ -9,7 +9,7 @@ import {
 } from "./ui/table";
 import { exampleYields, calculateYield } from "@/utils/utils";
 
-type Props = {
+interface Props {
   dataYield: number
 }
 
@@ -18,7 +18,7 @@ const TableYield = ({ dataYield }: Props) => {
     <Table>
       <TableCaption>Rendimientos calculados a 30 días</TableCaption>
       <TableHeader>
-        <TableRow className="">
+        <TableRow>
           <TableHead>#</TableHead>
           <TableHead>Inversión</TableHead>
           <TableHead>Rendimiento</TableHead>
