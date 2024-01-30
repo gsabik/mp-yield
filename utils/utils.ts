@@ -14,9 +14,8 @@ export const exampleYields = [
 ];
 
 // Function for calculating the monthly yield of an inverson
-export const calculateYield = (investment: number, yearYield: number) => {
+export const calculateYield = (investment: number, yearYield: number): number => {
 	const monthlyYield = (yearYield / 12)/100;
 	const resultMonthlyYield = (investment * monthlyYield);
-	const parsedResultMonthlyYield = resultMonthlyYield.toLocaleString("es-AR", { style: "currency", currency: "ARS" });
-	return parsedResultMonthlyYield;
+	return resultMonthlyYield;
 }
