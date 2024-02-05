@@ -13,7 +13,8 @@ export const scrapeMercadoPago = async() => {
 	});
 
 	// Regex text scrape
-	const result = scrapeText?.replace(/\D+\.?\D+/g, "");
-	const parseResult = result ? parseInt(result) : NaN;
-	return parseResult;
+	const result = scrapeText?.replace(/\D+\.?\D+/g, "") ?? "";
+	const parseResult = result?.replace(",", ".");
+	const textToNumber = parseFloat(parseResult);
+	return textToNumber;
 }

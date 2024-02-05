@@ -8,6 +8,10 @@ interface Props {
   dataYield: number
 }
 
+interface Form extends HTMLFormElement {
+  investment: HTMLInputElement;
+}
+
 const FormYield = ({ dataYield }: Props) => {
   const [investment, setInvestment] = useState<number>(0);
   const [yieldObtained, setYieldObtained] = useState<number>(0);
@@ -16,7 +20,7 @@ const FormYield = ({ dataYield }: Props) => {
     setInvestment(e.target.value);
   }
 
-  const handleSubmit = (e: any ) => {
+  const handleSubmit = (e: React.ChangeEvent<Form>) => {
     e.preventDefault();
     const resultOfInvestement = calculateYield(investment, dataYield);
     setYieldObtained(resultOfInvestement);

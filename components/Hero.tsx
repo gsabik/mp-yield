@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const Hero = async () => {
+const Hero = () => {
   return (
     <section className="flex flex-col h-screen items-center justify-center">
       <div className="flex flex-col justify-center  items-center space-y-2">
