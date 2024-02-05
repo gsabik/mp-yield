@@ -18,7 +18,7 @@ const TableYield = ({ dataYield }: Props) => {
     <div className="space-y-4">
       <h3>Rendimientos de referencia</h3>
       <Table>
-        <TableCaption>Rendimientos calculados a 30 días</TableCaption>
+        <TableCaption className="underline underline-offset-4">Rendimientos calculados a 30 días</TableCaption>
         <TableHeader>
           <TableRow>
             <TableHead>#</TableHead>
