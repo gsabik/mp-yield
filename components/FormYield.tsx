@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { calculateYield } from "@/utils/utils";
 import { Button } from "./ui/button";
+import { Input } from "./ui/input";
 
 interface Props {
   dataYield: number
@@ -30,14 +31,14 @@ const FormYield = ({ dataYield }: Props) => {
     <div className="space-y-4">
       <h3>Calculá tu rendimiento</h3> 
       <form className="flex flex-col space-y-4" onSubmit={handleSubmit}>
-        <input 
-          className="px-4 py-2 rounded truncate" 
+        <Input
+          className="px-4 py-4 rounded truncate" 
           onChange={handleInputChange}
           placeholder="Ingresá el monto de la inversión" 
           type="number"
           value={investment}
         />
-        <Button variant="outline">Calcular</Button>
+        <Button variant="secondary">Calcular</Button>
       </form>
       <p>El rendimiento obtenido es: <span className="font-semibold">{yieldObtained.toLocaleString("es-AR", { style: "currency", currency: "ARS" })}</span></p>
     </div>
