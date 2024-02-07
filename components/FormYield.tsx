@@ -16,8 +16,8 @@ const FormYield = ({ dataYield }: Props) => {
   const [investment, setInvestment] = useState<number>(0);
   const [yieldObtained, setYieldObtained] = useState<number>(0);
 
-  const handleInputChange = (e: any) => {
-    setInvestment(e.target.value);
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInvestment(parseFloat(e.target.value));
   }
 
   const handleSubmit = (e: React.ChangeEvent<Form>) => {
