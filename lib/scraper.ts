@@ -2,7 +2,7 @@ import puppeteer from "puppeteer";
 
 export const scrapeMercadoPago = async() => {
 	const MPURL = "https://www.mercadopago.com.ar/cuenta";
-	const browser = await puppeteer.launch();
+	const browser = await puppeteer.launch({ headless: "new" });
 	const page = await browser.newPage();
 	await page.goto(MPURL);
 
