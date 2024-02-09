@@ -10,9 +10,10 @@ const Yield = async() => {
     <section className="flex flex-col h-screen items-center justify-center" id="yield">
         <div className="flex flex-col">
           <h2 className="text-2xl text-center">El rendimiento actual es de <span className="font-semibold decoration-solid underline underline-offset-4">{dataYield}%</span></h2>
-          <div className="flex py-4">
+          <div className="flex flex-col md:flex-row py-4">
             <FormYield dataYield={dataYield}/>
-            <Separator className="mx-4" orientation="vertical"/>
+            <Separator className="mx-4 hidden md:block" orientation="vertical"/>
+            <Separator className="my-4 block md:hidden" orientation="horizontal"/>
             <TableYield dataYield={dataYield}/>
           </div>
         </div>
