@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
   return (
-    <html className="scroll-smooth" lang="es">
+    <html className="scroll-smooth over snap-y snap-mandatory" lang="es">
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
